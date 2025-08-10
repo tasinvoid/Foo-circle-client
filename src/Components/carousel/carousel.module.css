@@ -1,0 +1,46 @@
+/* Swiper Custom Styles for Navigation and Pagination */
+
+/* Navigation buttons (next and prev) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #818cf8; /* text-indigo-400 */
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.9);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #6366f1; /* text-indigo-500 */
+  transform: scale(1.1);
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  background-color: #6b7280; /* text-gray-500 */
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Active pagination dot */
+.swiper-pagination-bullet-active {
+  background-color: #818cf8; /* text-indigo-400 */
+  width: 12px;
+  border-radius: 6px;
+  opacity: 1;
+}
+
+/* Animation for the title */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
