@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 const AddFood = () => {
   const { user } = useContext(AuthContext);
   const { theme } = useContext(ThemeContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   if (!user) {
     return <div>Loading user...</div>;
@@ -22,7 +22,7 @@ const AddFood = () => {
     foodData.photoURL = foodData.photoURL || user.photoURL;
 
     // send data to backend
-    fetch("http://localhost:3000/addFood", {
+    fetch("https://foo-circle.vercel.app/addFood", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,8 +41,7 @@ const AddFood = () => {
             confirmButtonColor: "#4F46E5",
           });
           form.reset();
-          navigate('/')
-
+          navigate("/");
         }
       });
   }
@@ -65,9 +64,7 @@ const AddFood = () => {
           Add a Food
         </h1>
         <p
-          className={`${
-            theme === "dark" ? "text-gray-300" : "text-gray-600"
-          }`}
+          className={`${theme === "dark" ? "text-gray-300" : "text-gray-600"}`}
         >
           Every contribution, no matter how small, makes a significant
           difference in our community. If you have surplus food – whether it's
@@ -299,7 +296,9 @@ const AddFood = () => {
             >
               <option
                 className={`${
-                  theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-white text-gray-800"
+                  theme === "dark"
+                    ? "bg-gray-800 text-gray-300"
+                    : "bg-white text-gray-800"
                 }`}
                 value=""
               >
@@ -307,7 +306,9 @@ const AddFood = () => {
               </option>
               <option
                 className={`${
-                  theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-white text-gray-800"
+                  theme === "dark"
+                    ? "bg-gray-800 text-gray-300"
+                    : "bg-white text-gray-800"
                 }`}
                 value="available"
               >
@@ -315,7 +316,9 @@ const AddFood = () => {
               </option>
               <option
                 className={`${
-                  theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-white text-gray-800"
+                  theme === "dark"
+                    ? "bg-gray-800 text-gray-300"
+                    : "bg-white text-gray-800"
                 }`}
                 value="notAvailable"
               >

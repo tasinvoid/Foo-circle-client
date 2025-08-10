@@ -29,7 +29,7 @@ const EditMyFood = () => {
     const formData = new FormData(form);
     const updatedFoodData = Object.fromEntries(formData.entries());
 
-    fetch(`http://localhost:3000/editMyFood/${_id}`, {
+    fetch(`https://foo-circle.vercel.app/editMyFood/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -206,17 +206,13 @@ const EditMyFood = () => {
                 }`}
               >
                 <option
-                  className={`${
-                    theme === "dark" ? "bg-gray-800" : "bg-white"
-                  }`}
+                  className={`${theme === "dark" ? "bg-gray-800" : "bg-white"}`}
                   value="available"
                 >
                   Available
                 </option>
                 <option
-                  className={`${
-                    theme === "dark" ? "bg-gray-800" : "bg-white"
-                  }`}
+                  className={`${theme === "dark" ? "bg-gray-800" : "bg-white"}`}
                   value="notAvailable"
                 >
                   Not Available

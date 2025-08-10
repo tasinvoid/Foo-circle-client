@@ -25,7 +25,7 @@ const AvailableFoods = () => {
     queryKey: ["availableFoods", sortOrder],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:3000/allFoods?sortOrder=${sortOrder}`
+        `https://foo-circle.vercel.app/allFoods?sortOrder=${sortOrder}`
       );
       return res.json();
     },
@@ -99,7 +99,6 @@ const AvailableFoods = () => {
         {availableFoods.map((food) => (
           <div
             key={food._id}
-            
             className={`p-4 h-[500px] rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col justify-between ${
               theme === "dark"
                 ? "bg-gray-800 bg-opacity-80 backdrop-blur-sm border border-gray-700 hover:border-indigo-500 text-gray-100"

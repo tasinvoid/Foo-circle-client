@@ -27,7 +27,7 @@ const FoodDetails = () => {
   function handleRequestFood() {
     closeModal();
     fetch(
-      `http://localhost:3000/updateAdditionalNotes/${availableFoodsData[0]._id}`,
+      `https://foo-circle.vercel.app/updateAdditionalNotes/${availableFoodsData[0]._id}`,
       {
         method: "PATCH",
         body: JSON.stringify({
@@ -120,8 +120,14 @@ const FoodDetails = () => {
                       </p>
                     </div>
                     <div className="mt-4 text-sm text-gray-400">
-                      <p>Shared by: <span className="text-indigo-400">{food.Name}</span></p>
-                      <p>Donor Contact: <span className="text-pink-400">{food.Email}</span></p>
+                      <p>
+                        Shared by:{" "}
+                        <span className="text-indigo-400">{food.Name}</span>
+                      </p>
+                      <p>
+                        Donor Contact:{" "}
+                        <span className="text-pink-400">{food.Email}</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -180,9 +186,7 @@ const FoodDetails = () => {
                             <span className="font-semibold text-indigo-400">
                               Availability:
                             </span>
-                            <span
-                              className={`text-indigo-400 font-medium`}
-                            >
+                            <span className={`text-indigo-400 font-medium`}>
                               {food.availability}
                             </span>
                           </div>

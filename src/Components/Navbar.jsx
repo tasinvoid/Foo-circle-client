@@ -13,7 +13,7 @@ const Navbar = () => {
   function handleLogout() {
     signOutUser().then(() => console.log("user logged out"));
   }
-console.log(user);
+  console.log(user);
   const navLinkClass = ({ isActive }) =>
     `font-semibold transition-all duration-300 ease-in-out px-4 py-2 rounded-lg relative overflow-hidden group 
     ${
@@ -66,6 +66,7 @@ console.log(user);
         <>
           <AnimatedLink to="/register">Register</AnimatedLink>
           <AnimatedLink to="/login">Login</AnimatedLink>
+          <AnimatedLink to="/contact">Contact</AnimatedLink>
         </>
       )}
     </>
@@ -138,6 +139,9 @@ console.log(user);
                   <NavLink to="/login" className={dropdownLinkClass}>
                     Login
                   </NavLink>
+                  <NavLink to="/contact" className={dropdownLinkClass}>
+                    Contact
+                  </NavLink>
                 </>
               )}
             </li>
@@ -159,7 +163,7 @@ console.log(user);
       </div>
 
       <div className="navbar-end">
-        <ThemeToggleButton  />
+        <ThemeToggleButton />
         {user && !loading ? (
           <div className="dropdown dropdown-end ml-4">
             <div

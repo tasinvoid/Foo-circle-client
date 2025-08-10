@@ -16,7 +16,7 @@ const FeaturedFoods = () => {
   } = useQuery({
     queryKey: ["featuredFoods"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:3000/featuredFoods");
+      const res = await fetch("https://foo-circle.vercel.app/featuredFoods");
       return res.json();
     },
   });

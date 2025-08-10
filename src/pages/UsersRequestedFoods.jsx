@@ -17,7 +17,7 @@ const UsersRequestedFoods = () => {
     queryKey: ["currentUserRequestedFoods", currentUserEmail],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:3000/requestedFoods?Email=${currentUserEmail}`,
+        `https://foo-circle.vercel.app/requestedFoods?Email=${currentUserEmail}`,
         {
           headers: {
             authorization: `Bearer ${user.accessToken}`,

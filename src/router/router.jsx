@@ -47,13 +47,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/availableFoods/:id",
-        element: (
-          <PrivateRoute>
-            <FoodDetails></FoodDetails>
-          </PrivateRoute>
-        ),
+        element: <FoodDetails></FoodDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/availableFoods/${params.id}`),
+          fetch(`https://foo-circle.vercel.app/availableFoods/${params.id}`),
         hydrateFallbackElement: <Loading></Loading>,
       },
       {
@@ -84,7 +80,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/availableFoods/${params.id}`),
+          fetch(`https://foo-circle.vercel.app/availableFoods/${params.id}`),
         errorElement: <ErrorBoundary></ErrorBoundary>,
         hydrateFallbackElement: <Loading></Loading>,
       },

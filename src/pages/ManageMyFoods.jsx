@@ -22,7 +22,7 @@ const ManageMyFoods = () => {
     queryFn: async () => {
       if (!user) return [];
       const res = await fetch(
-        `http://localhost:3000/manageMyFoods?Email=${user.email}`
+        `https://foo-circle.vercel.app/manageMyFoods?Email=${user.email}`
       );
       return res.json();
     },
@@ -31,7 +31,7 @@ const ManageMyFoods = () => {
 
   const deleteFoodMutation = useMutation({
     mutationFn: (id) => {
-      return fetch(`http://localhost:3000/manageMyFoods/${id}`, {
+      return fetch(`https://foo-circle.vercel.app/manageMyFoods/${id}`, {
         method: "DELETE",
       }).then((res) => res.json());
     },

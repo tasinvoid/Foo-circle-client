@@ -18,7 +18,7 @@ const DashBoardLayout = () => {
   } = useQuery({
     queryKey: ["allFoods"],
     queryFn: async () => {
-      const response = await fetch("http://localhost:3000/foods");
+      const response = await fetch("https://foo-circle.vercel.app/foods");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
