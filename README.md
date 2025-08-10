@@ -1,6 +1,6 @@
 Alright, here's a beautifully formatted GitHub README for your Food Circle project, complete with numbers and icons, ready for you to copy and paste!
 
-Food Circle 🍎
+Food circle 🍎
 Food Circle is a heartfelt community initiative designed to bridge the gap between surplus food and those who can benefit from it. Our mission is simple yet profound: to significantly reduce food waste and strengthen community bonds by making the act of sharing food effortless, safe, and impactful.
 
 ✨ Features
